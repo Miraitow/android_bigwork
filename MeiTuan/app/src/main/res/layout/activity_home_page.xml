@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!--顶部布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFE026"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/location_logo" />
+
+        <Button
+            android:id="@+id/toAddAddress_Button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFE026"
+            android:text="添加地址"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--搜索框布局-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/searchFood_EditText"-->
+<!--            android:layout_width="330dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:background="@drawable/stroke"-->
+<!--            android:hint="  输入要搜索的美食" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/searchFood_Button"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/round_corner"-->
+<!--            android:backgroundTint="#FFE026"-->
+<!--            android:text="搜索" />-->
+<!--    </LinearLayout>-->
+
+    <!--子模块布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="85dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/FineFood_Button"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/fine_food" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/Drink_Button"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/drink" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/Market_Button"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/supermarket" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/Fruit_Button"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/fruit" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--店铺展示布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:background="#F6F4F5"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/storeList_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+
+    </LinearLayout>
+
+
+
+        <!--底部导航栏-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_home"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</LinearLayout>
